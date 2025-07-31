@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Love Letter for My Sweetheart Riri</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body class="min-h-screen flex flex-col items-center text-gray-800">
+  <div id="root"></div>
+  <script type="text/babel" src="src/components/Home.jsx"></script>
+  <script type="text/babel" src="src/components/FlowerGarden.jsx"></script>
+  <script type="text/babel" src="src/components/PoetryHaven.jsx"></script>
+  <script type="text/babel" src="src/components/Singing.jsx"></script>
+  <script type="text/babel" src="src/components/TeddyBearHug.jsx"></script>
+  <script type="text/babel" src="src/components/Reassurance.jsx"></script>
+  <script type="text/babel" src="src/App.jsx"></script>
+  <script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(React.createElement(App));
+  </script>
+</body>
+</html>
