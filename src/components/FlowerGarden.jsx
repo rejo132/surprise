@@ -130,26 +130,17 @@ function FlowerGarden() {
         })
       ),
 
-      React.createElement('div', { className: 'grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8' },
+      React.createElement('div', { className: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8' },
         filteredFlowers.map(function(flower) {
-          return React.createElement('div', { 
-            key: flower.id, 
-            className: 'recipe-card cursor-pointer hover:scale-105 transition-transform duration-300',
-            onClick: function() {
-              handleFlowerClick(flower);
-            }
+          return React.createElement('div', {
+            key: flower.name,
+            className: 'flower-3d quiz-card glass-card p-6 cursor-pointer magic-pulse hover:scale-105 transition-all duration-300',
+            onClick: function() { handleFlowerClick(flower); }
           },
-            React.createElement('div', { className: 'text-center' },
-              React.createElement('div', { className: 'text-6xl mb-4' }, flower.animation),
-              React.createElement('h3', { className: 'text-xl font-bold text-purple-600 mb-2' }, flower.name),
-              React.createElement('p', { className: 'text-sm text-gray-600 mb-2' }, flower.scientificName),
-              React.createElement('p', { className: 'text-gray-700 mb-3' }, flower.description),
-              React.createElement('div', { className: 'flex flex-wrap gap-2 justify-center' },
-                React.createElement('span', { className: 'bg-pink-100 px-2 py-1 rounded text-xs' }, flower.waterNeeds),
-                React.createElement('span', { className: 'bg-purple-100 px-2 py-1 rounded text-xs' }, flower.sunNeeds),
-                React.createElement('span', { className: 'bg-green-100 px-2 py-1 rounded text-xs' }, flower.bestTime)
-              )
-            )
+            React.createElement('div', { className: 'text-6xl mb-4 text-center' }, flower.animation),
+            React.createElement('h3', { className: 'text-xl font-bold text-purple-700 mb-2' }, flower.name),
+            React.createElement('p', { className: 'text-gray-600 mb-2' }, flower.description),
+            React.createElement('p', { className: 'text-sm text-pink-600' }, flower.color + ' • ' + flower.height)
           );
         })
       ),
@@ -204,12 +195,52 @@ function FlowerGarden() {
       style: { animation: 'fadeInOut 3s ease-in-out' }
     },
       React.createElement('div', { 
-        className: 'text-9xl',
+        className: 'text-9xl relative',
         style: { 
           animation: 'flowerBloom 3s ease-in-out',
           filter: 'drop-shadow(0 0 20px rgba(255, 192, 203, 0.8))'
         }
-      }, selectedFlower.animation)
+      }, 
+        React.createElement('div', { className: 'flower-3d' }, selectedFlower.animation),
+        // Kisses around the flower
+        React.createElement('div', { 
+          className: 'absolute -top-8 -left-8 text-4xl',
+          style: { animation: 'kissFloat 2s ease-in-out 0.5s' }
+        }, '💋'),
+        React.createElement('div', { 
+          className: 'absolute -top-8 -right-8 text-4xl',
+          style: { animation: 'kissFloat 2s ease-in-out 1s' }
+        }, '💋'),
+        React.createElement('div', { 
+          className: 'absolute -bottom-8 -left-8 text-4xl',
+          style: { animation: 'kissFloat 2s ease-in-out 1.5s' }
+        }, '💋'),
+        React.createElement('div', { 
+          className: 'absolute -bottom-8 -right-8 text-4xl',
+          style: { animation: 'kissFloat 2s ease-in-out 2s' }
+        }, '💋'),
+        React.createElement('div', { 
+          className: 'absolute top-0 -left-12 text-4xl',
+          style: { animation: 'kissFloat 2s ease-in-out 0.8s' }
+        }, '💕'),
+        React.createElement('div', { 
+          className: 'absolute top-0 -right-12 text-4xl',
+          style: { animation: 'kissFloat 2s ease-in-out 1.2s' }
+        }, '💕'),
+        React.createElement('div', { 
+          className: 'absolute -top-12 left-0 text-4xl',
+          style: { animation: 'kissFloat 2s ease-in-out 0.3s' }
+        }, '💖'),
+        React.createElement('div', { 
+          className: 'absolute -bottom-12 left-0 text-4xl',
+          style: { animation: 'kissFloat 2s ease-in-out 1.8s' }
+        }, '💖'),
+        // Sound effect simulation
+        React.createElement('div', { 
+          className: 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl',
+          style: { animation: 'sparkle 1s ease-in-out 0.5s' }
+        }, '🔊')
+      )
     ),
 
     React.createElement('footer', { className: 'text-center text-xl text-purple-700' },

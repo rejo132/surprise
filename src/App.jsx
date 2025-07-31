@@ -119,6 +119,7 @@ function SimpleNavbar({ currentTab, setCurrentTab }) {
     { id: 'poetry', name: '✍️ Poetry Haven', component: PoetryHaven },
     { id: 'singing', name: '🎵 Sing Your Heart', component: Singing },
     { id: 'teddy', name: '🧸 Teddy Bear Hug', component: TeddyBearHug },
+    { id: 'games', name: '🎮 Fun Games', component: InteractiveGames },
     { id: 'reassurance', name: '💝 My Love & Promise', component: Reassurance }
   ];
 
@@ -149,6 +150,7 @@ function App() {
     poetry: PoetryHaven,
     singing: Singing,
     teddy: TeddyBearHug,
+    games: InteractiveGames,
     reassurance: Reassurance
   };
 

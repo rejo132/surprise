@@ -161,7 +161,13 @@ function Reassurance() {
         React.createElement('p', { className: 'text-xl text-purple-800 mb-4' }, 'You\'ve clicked so many times, you must really love me! 💕'),
         React.createElement('p', { className: 'text-lg text-pink-700 mb-4' }, 'Just like I love you more than words can ever express...'),
         React.createElement('p', { className: 'text-lg text-purple-800 mb-4' }, 'Riri, you are my everything. My past, my present, and my future.'),
-        React.createElement('p', { className: 'text-lg text-pink-700' }, 'I promise to love you more with each passing day, and to make every moment with you magical.'),
+        React.createElement('p', { className: 'text-lg text-pink-700 mb-4' }, 'I promise to love you more with each passing day, and to make every moment with you magical.'),
+        React.createElement('div', { className: 'bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-2xl mb-4' },
+          React.createElement('p', { className: 'text-2xl font-bold text-purple-800 italic' }, 'Nakupenda mamma na wewe ni wangu sawa baby 💋💕')
+        ),
+        React.createElement('div', { className: 'bg-gradient-to-r from-pink-100 to-purple-100 p-6 rounded-2xl mb-4' },
+          React.createElement('p', { className: 'text-lg text-purple-800 leading-relaxed' }, 'Nimetengeneza hii website na roho yangu yote babygirl, lately najua things have not really gone well with us but i love you and i see you as a huge part of my life, so eeeh let this website be an evidence of my commitment with us my lovely Riri i love you 💕💖💕')
+        ),
         React.createElement('div', { className: 'text-6xl mt-4' }, '💖💕💖💕💖')
       ),
 
